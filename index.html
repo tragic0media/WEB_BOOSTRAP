@@ -20,11 +20,11 @@
 
 
    <!-- Navbar -->
-<nav class="navbar sticky-top navbar-expand-lg">
+<nav class="navbar sticky-top navbar-expand-xl">
     <div class="container-fluid">
       <a class="navbar-brand" href="#top"><img src="img\Sin título-1.png" alt=""></a>
       
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -34,7 +34,7 @@
             <a class="nav-link" href="#entradas">ENTRADAS</a>
           </li>
           <li class="nav-item px-5">
-            <a class="nav-link" href="#lineup">LINE-UP</a>
+            <a class="nav-link" href="#lineup">ARTISTAS</a>
           </li>
           <li class="nav-item px-5">
             <a class="nav-link" href="#complementos">COMPLEMENTOS</a>
@@ -53,37 +53,59 @@
       <source src="img\aftermovie.mp4" type="video/mp4">
       Tu navegador no soporta la reproducción de video.
     </video>
-    <div id="countdown">00:00:00</div>
-    <div class="header-text">
-      <a>RIVERLAND</a>
-      <a>22.08.25</a>
+    <div>
+      <div id="countdown">00:00:00</div>
+      <div class="col-6 text-center">
+      <button class="btn p-3 px-4 disabled">COMPRAR</button>
+      </div>
+    </div>
+    
+    <div class="header-text row align-items-center">
+      <div class="col">
+        <a>RIVERLAND</a>
+      </div>
+      <div class="col">
+        <a id="fecha">22.08.25</a>
+      </div>
+      
+      
     </div>
   </header>
   
   <!-- Sección de Entradas -->
   <section id="entradas" class="py-5">
     <div class="container">
-      <h2 class="mb-5" data-aos="fade-up">ENTRADAS</h2>
+      <h2 class="mb-5 section-title" data-aos="fade-up">ENTRADAS</h2>
       <h3 data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor a lorem volutpat dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla ac felis sem. Sed mauris odio, luctus at elit quis, laoreet molestie dolor. Donec interdum, mauris vitae ornare ultrices, nulla nibh tincidunt mi, at rhoncus lectus elit ut eros. Sed tincidunt tellus vitae tristique facilisis. Phasellus tortor massa, fermentum quis aliquam ut, hendrerit quis nulla.</h3>
      
       <div class="row justify-content-center">
-        <div class="col-md-4" data-aos="fade-up">
-          <div class="card p-4">
-            <h3> ENTRADA GENERAL</h3>
+        <div class="col-xl-4 mb-4" data-aos="flip-right" data-aos-delay="200">
+          <div class="card card-sold-out p-4">
+            <div class="card_body">
+                <h3>EARLY ACCESS</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor a lorem volutpat dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla ac felis sem.</p>
             <div class="row justify-content-between align-items-center">
               <div class="col-6 text-start">
                 <h6 class="card-price">40€</h6>
               </div>
               <div class="col-6 text-center">
-                <button class="btn p-3 px-4">COMPRAR</button>
+                <button class="btn p-3 px-4 disabled">COMPRAR</button>
               </div>
             </div>
+
+            <!-- Texto "SOLD OUT" superpuesto -->
+            <div class="sold-out-text">Sold Out</div>
+            </div>
+            
+
+
           </div>
         </div>
-        <div class="col-md-4" data-aos="fade-up">
+
+
+        <div class="col-xl-4 mb-4" data-aos="flip-right" data-aos-delay="400">
           <div class="card p-4">
-            <h3>ENTRADA VIP</h3>
+            <h3>ABONO GENERAL</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor a lorem volutpat dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla ac felis sem.</p>
             <div class="row justify-content-between align-items-center">
               <div class="col-6 text-start">
@@ -95,9 +117,9 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4" data-aos="fade-up">
+        <div class="col-xl-4 mb-4" data-aos="flip-right" data-aos-delay="600">
           <div class="card p-4">
-            <h3>ENTRADA ULTRA</h3>
+            <h3>ABONO VIP</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor a lorem volutpat dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla ac felis sem.</p>
             <div class="row justify-content-between align-items-center">
               <div class="col-6 text-start">
@@ -115,14 +137,16 @@
 
 
   
+
+  
 <!-- Sección de Line-up -->
 <section id="lineup" class="py-5">
     <div class="container">
-      <h2 class="mb-5" data-aos="fade-up">LINE-UP</h2>
-      <h3 data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor a lorem volutpat dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla ac felis sem. Sed mauris odio, luctus at elit quis, laoreet molestie dolor. Donec interdum, mauris vitae ornare ultrices, nulla nibh tincidunt mi, at rhoncus lectus elit ut eros. Sed tincidunt tellus vitae tristique facilisis. Phasellus tortor massa, fermentum quis aliquam ut, hendrerit quis nulla.</h3>
+      <h2 class="mb-5 section-title" data-aos="fade-up">LINE-UP</h2>
+      <h3 data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor a lorem volutpat dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla ac felis sem. Sed mauris odio, luctus at elit quis, laoreet molestie dolor. Donec interdum, mauris vitae ornare ultrices, nulla nibh tincidunt mi, at rhoncus lectus elit ut eros.</h3>
       <div class="row">
         <!-- Repite el siguiente bloque para cada uno de los 12 artistas -->
-        <div class="col-md-3 col-6 artista m-0 p-1" data-aos="fade-left">
+        <div class="col-md-3 col-6 artista m-0 p-1" data-aos="fade-right">
           <img src="img\ARTISTA_1.png" alt="Artista 1">
           
         </div>
@@ -134,11 +158,11 @@
           <img src="img\ARTISTA_3.png" alt="Artista 3">
           
         </div>
-        <div class="col-md-3 col-6 artista m-0 p-1" data-aos="fade-right">
+        <div class="col-md-3 col-6 artista m-0 p-1" data-aos="fade-left">
           <img src="img\ARTISTA_4.png" alt="Artista 4">
           
         </div>
-        <div class="col-md-3 col-6 artista m-0 p-1" data-aos="fade-right">
+        <div class="col-md-3 col-6 artista m-0 p-1" data-aos="fade-left">
           <img src="img\ARTISTA_1.png" alt="Artista 5">
           
         </div>
@@ -150,11 +174,11 @@
           <img src="img\ARTISTA_3.png" alt="Artista 7">
           
         </div>
-        <div class="col-md-3 col-6 artista m-0 p-1" data-aos="fade-left">
+        <div class="col-md-3 col-6 artista m-0 p-1" data-aos="fade-right">
           <img src="img\ARTISTA_4.png" alt="Artista 8">
           
         </div>
-        <div class="col-md-3 col-6 artista m-0 p-1" data-aos="fade-left">
+        <div class="col-md-3 col-6 artista m-0 p-1" data-aos="fade-right">
           <img src="img\ARTISTA_1.png" alt="Artista 9">
          
         </div>
@@ -166,7 +190,7 @@
           <img src="img\ARTISTA_3.png" alt="Artista 11">
           
         </div>
-        <div class="col-md-3 col-6 artista m-0 p-1" data-aos="fade-right">
+        <div class="col-md-3 col-6 artista m-0 p-1" data-aos="fade-left">
           <img src="img\ARTISTA_4.png" alt="Artista 12">
           
         </div>
@@ -187,14 +211,14 @@
 
 <section id="complementos" class="py-5">
     <div class="container">
-      <h2 class="mb-5" data-aos="fade-up">COMPLEMENTOS</h2>
-      <h3 data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor a lorem volutpat dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla ac felis sem. Sed mauris odio, luctus at elit quis, laoreet molestie dolor. Donec interdum, mauris vitae ornare ultrices, nulla nibh tincidunt mi, at rhoncus lectus elit ut eros. Sed tincidunt tellus vitae tristique facilisis. Phasellus tortor massa, fermentum quis aliquam ut, hendrerit quis nulla.</h3>
+      <h2 class="mb-5 section-title" data-aos="fade-up">COMPLEMENTOS</h2>
+      <h3 data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor a lorem volutpat dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla ac felis sem. Sed mauris odio, luctus at elit quis, laoreet molestie dolor. Donec interdum, mauris vitae ornare ultrices, nulla nibh tincidunt mi, at rhoncus lectus elit ut eros.</h3>
      
       <div class="accordion" id="complementosAccordion" data-aos="fade-up">
 
         
                 <!-- Opción 1 del Accordion -->
-        <div class="accordion-item">
+        <div class="accordion-item" >
           <h2 class="accordion-header" id="headingOne">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
               CAMPING
@@ -202,8 +226,24 @@
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#complementosAccordion">
             <div class="accordion-body">
-              <p>Disfruta de una experiencia inmersiva en nuestro camping, rodeado de naturaleza y a solo unos pasos del escenario principal. Perfecto para vivir el festival las 24 horas.</p>
-              <img src="img\cap1.png" alt="Complemento 1" class="img-fluid">
+
+              <div>
+                <div class="col accordion-text">
+                  <p>Disfruta de una experiencia inmersiva en nuestro camping, rodeado de naturaleza y a solo unos pasos del escenario principal. Perfecto para vivir el festival las 24 horas.</p>
+                
+                </div>
+                <div class="col-6 text-center">
+                  <button class="btn p-3 px-4">COMPRAR</button>
+                </div>
+              </div>
+              
+
+
+
+              <div>
+                <img src="img\cap2.png" alt="Complemento 1" class="img-fluid">
+              </div>
+             
             </div>
           </div>
         </div>
@@ -211,14 +251,20 @@
         <!-- Opción 2 del Accordion -->
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
               GLAMPING
             </button>
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#complementosAccordion">
             <div class="accordion-body">
-              <p>Si prefieres comodidad y lujo, nuestro glamping ofrece tiendas equipadas con todo lo necesario para relajarte tras un día lleno de música, sin renunciar al confort.</p>
-              <img src="https://via.placeholder.com/400" alt="Complemento 2" class="img-fluid">
+              <div class="accordion-text">
+                <p>Si prefieres comodidad y lujo, nuestro glamping ofrece tiendas equipadas con todo lo necesario para relajarte tras un día lleno de música, sin renunciar al confort.</p>
+              
+              </div>
+              <div>
+                <img src="img\cap3.png" alt="Complemento 1" class="img-fluid">
+              </div>
+             
             </div>
           </div>
         </div>
@@ -226,14 +272,20 @@
         <!-- Opción 3 del Accordion -->
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
               CASHLESS
             </button>
           </h2>
           <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#complementosAccordion">
             <div class="accordion-body">
-              <p>¡Olvídate del efectivo! Con nuestras pulseras cashless podrás pagar de forma rápida y segura en todo el festival, desde bebidas hasta souvenirs.</p>
-              <img src="https://via.placeholder.com/400" alt="Complemento 3" class="img-fluid">
+              <div class="accordion-text">
+                <p>¡Olvídate del efectivo! Con nuestras pulseras cashless podrás pagar de forma rápida y segura en todo el festival, desde bebidas hasta souvenirs.</p>
+              
+              </div>
+              <div>
+                <img src="img\cap4.png" alt="Complemento 1" class="img-fluid">
+              </div>
+             
             </div>
           </div>
         </div>
@@ -241,14 +293,20 @@
         <!-- Opción 4 del Accordion -->
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingFour">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
               TAQUILLAS
             </button>
           </h2>
           <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#complementosAccordion">
             <div class="accordion-body">
-              <p>Mantén tus pertenencias seguras mientras disfrutas del festival. Disponemos de taquillas con acceso fácil para que puedas almacenar tus objetos personales.</p>
-              <img src="https://via.placeholder.com/400" alt="Complemento 4" class="img-fluid">
+              <div class="accordion-text">
+                <p>Mantén tus pertenencias seguras mientras disfrutas del festival. Disponemos de taquillas con acceso fácil para que puedas almacenar tus objetos personales.</p>
+              
+              </div>
+              <div>
+                <img src="img\cap5.png" alt="Complemento 1" class="img-fluid">
+              </div>
+             
             </div>
           </div>
         </div>
@@ -256,14 +314,20 @@
         <!-- Opción 5 del Accordion -->
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingFive">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
               PUNTOS DE CARGA
             </button>
           </h2>
           <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#complementosAccordion">
             <div class="accordion-body">
-              <p>¿Batería baja? No te preocupes. Disponemos de puntos de carga para mantener tus dispositivos conectados y capturar cada momento del festival.</p>
-              <img src="https://via.placeholder.com/400" alt="Complemento 5" class="img-fluid">
+              <div class="accordion-text">
+                <p>¿Batería baja? No te preocupes. Disponemos de puntos de carga para mantener tus dispositivos conectados y capturar cada momento del festival.</p>
+              
+              </div>
+              <div>
+                <img src="img\cap6.png" alt="Complemento 1" class="img-fluid">
+              </div>
+             
             </div>
           </div>
         </div>
@@ -283,14 +347,14 @@
 <!-- Sección de Ubicación -->
 <section id="ubicacion" class="py-5">
     <div class="container">
-      <h2 class="mb-5" data-aos="fade-up">ENCUÉNTRANOS</h2>
+      <h2 class="mb-5 section-title" data-aos="fade-up">ENCUÉNTRANOS</h2>
       <h3 data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor a lorem volutpat dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla ac felis sem. Sed mauris odio, luctus at elit quis, laoreet molestie dolor. Donec interdum, mauris vitae ornare ultrices, nulla nibh tincidunt mi, at rhoncus lectus elit ut eros. Sed tincidunt tellus vitae tristique facilisis. Phasellus tortor massa, fermentum quis aliquam ut, hendrerit quis nulla.</h3>
      
       <div class="row">
-        <div class="col-md-6 maps" data-aos="fade-up">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.764784123759!2d-3.703790684595683!3d40.41677517936469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42287b6d32fd67%3A0xa4b526d52f3bc1a9!2sRiverland%20Fest!5e0!3m2!1ses!2ses!4v1614171241903!5m2!1ses!2ses" width="100%" height="350" style="border-radius:5px;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="col-md-6 mb-4 maps" data-aos="fade-right">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2899.1549683730705!2d-5.179634087106578!3d43.39469027099521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3619d57b48959d%3A0xb517f7b85a38b6b6!2sRiverland%20Fest!5e0!3m2!1ses!2ses!4v1729520133208!5m2!1ses!2ses" width="100%" height="350" style="border-radius:5px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <div class="col-md-6" data-aos="fade-up">
+        <div class="col-md-6 mb-4" data-aos="fade-left">
           <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1m7MboCq5HiEr4EWu2oqoy?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
       </div>
@@ -300,18 +364,49 @@
 
 
   
-  <!-- Footer de contacto -->
-  <footer class="py-3">
-    <div class="container">
-      <p>Contacto: info@riverlandfest.com</p>
-      <p>Teléfono: +34 123 456 789</p>
+ <!-- Footer -->
+<footer class="footer text-center" data-aos="fade-up">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h4>Contacta con Riverland</h4>
+      
+      </div>
     </div>
-  </footer>
+
+    <div class="row">
+      <div class="col-md-12 social-icons">
+        <a href="#"><i class="bi bi-twitter"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+      </div>
+    </div>
+
+    <div class="row mt-4 footer-links">
+      <div class="col-md-12">
+        
+        <a href="#">Política de Cookies</a>
+        <a href="#">Política de Privacidad</a>
+        <a href="#">Aviso Legal</a>
+        <a href="#">Términos y Condiciones</a>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-12">
+    
+        <img src="img\logoR.png" alt="Logo" class="footer-logo">
+      </div>
+    </div>
+  </div>
+</footer>
 
 
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
 
 <!-- AOS JS -->
