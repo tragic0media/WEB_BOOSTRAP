@@ -25,6 +25,8 @@ h3 {
 }
 
 
+
+
   /* Sticky navbar */
   
   nav {
@@ -126,10 +128,31 @@ h3 {
     color: black;
   }
 
-  .card button {
+  .card .btn {
     background-color: white;
     color: black;
+    transition: background-color 0.3s ease;
   }
+
+  .card .btn:hover {
+    background-color:  rgba(0, 0, 0, 0.5);
+    color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  
+
+  .card h3 {
+    color: #000000;
+  font-size: 2em;
+  font-weight: 300;
+  margin-bottom: 2em;
+  }
+
+
+.card h6 {
+  font-size: 5em;
+  font-weight: 100;
+}
 
   /* Grid de artistas */
   .artista img {
@@ -137,11 +160,16 @@ h3 {
     height: auto;
     object-fit: cover;
     border-radius: 20px;
+    transition: all 0.3s ease-in-out;
   }
 
-
+.artista img:hover {
+  filter: grayscale(100%);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
   .accordion-button {
     background-color: #D2A0B0;
+    font-size: 0.3em;
   }
 
   .accordion-body {
