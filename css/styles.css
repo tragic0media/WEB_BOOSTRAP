@@ -33,30 +33,33 @@ h3 {
     position: sticky;
     top: 0;
     z-index: 999;
+    height: 3.8em;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
   }
 
   nav a {
-    color: #D2A0B0;
+    color: #ffffff;
     font-weight: bold;
   }
 
 
   .nav-item a {
-    color: #D2A0B0;
+    color: #ffffff;
     font-size: 2rem;
     font-weight: 200;
   }
 
   .navbar-nav .nav-link {
     position: relative;
-    color: #D2A0B0; /* Color rosa para el texto */
+    color: #ffffff;
     padding: 10px 15px;
     transition: color 0.3s ease;
+    font-size: small;
+    font-family: "Rethink Sans", sans-serif;
   }
   
-  /* Efecto de línea animada */
+  /* Efecto de línea subrayada */
   .navbar-nav .nav-link::before {
     content: '';
     position: absolute;
@@ -64,7 +67,7 @@ h3 {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #ffffff; /* Color rosa de la línea */
+    background-color: #eaff01; 
     visibility: hidden;
     transition: all 0.3s ease-in-out;
   }
@@ -76,7 +79,7 @@ h3 {
   }
   
   .navbar-nav .nav-link:hover {
-    color: #ffffff; /* Cambia el color del texto en hover si deseas */
+    color: #eaff01; 
   }
   
 
