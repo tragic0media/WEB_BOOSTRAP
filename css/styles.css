@@ -1,21 +1,13 @@
-
-
-
-
-
-/* Estilos personalizados */
 body {
     font-family: "Mulish", sans-serif;
     font-weight: bold;
     background-color: #1a1a1a;
-    color: #D2A0B0; /* Color rosa por defecto */
+    color: #eaff01;
   }
 
-h2 {
-  font-size: 7rem;
-  font-weight: 100;
+#header-artistas {
+  margin-top: 2em;
 }
-
 
 h3 {
   color: #ffffff;
@@ -24,11 +16,6 @@ h3 {
   font-weight: 100;
 }
 
-
-
-
-  /* Sticky navbar */
-  
   nav {
     position: sticky;
     top: 0;
@@ -42,7 +29,6 @@ h3 {
     color: #ffffff;
     font-weight: bold;
   }
-
 
   .nav-item a {
     color: #ffffff;
@@ -59,7 +45,6 @@ h3 {
     font-family: "Rethink Sans", sans-serif;
   }
   
-  /* Efecto de línea subrayada */
   .navbar-nav .nav-link::before {
     content: '';
     position: absolute;
@@ -72,7 +57,6 @@ h3 {
     transition: all 0.3s ease-in-out;
   }
   
-  /* Hover para mostrar la línea */
   .navbar-nav .nav-link:hover::before {
     visibility: visible;
     width: 100%;
@@ -82,11 +66,6 @@ h3 {
     color: #eaff01; 
   }
   
-
-  
-
-
-  /* Estilos del header */
   header {
     height: 100vh;
     position: relative;
@@ -119,13 +98,11 @@ h3 {
     font-weight: 900;
   }
 
-  /* Cuenta atrás */
   #countdown {
     font-size: 5rem;
     font-weight: 900;
   }
 
-  /* Estilo de las cards */
   .card {
     background-color: #D2A0B0;
     color: black;
@@ -142,7 +119,6 @@ h3 {
     color: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   }
-  
 
   .card h3 {
     color: #000000;
@@ -151,13 +127,11 @@ h3 {
   margin-bottom: 2em;
   }
 
-
 .card h6 {
   font-size: 5em;
   font-weight: 100;
 }
 
-  /* Grid de artistas */
   .artista img {
     width: 100%;
     height: auto;
@@ -167,8 +141,7 @@ h3 {
   }
 
 .artista img:hover {
-  filter: grayscale(100%);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 20px rgba(91, 69, 69, 0.8);
 }
   .accordion-button {
     background-color: #D2A0B0;
@@ -183,7 +156,6 @@ h3 {
     width: 400px;
   }
 
-
   .maps {
     filter: grayscale();
   }
@@ -193,8 +165,6 @@ section {
   margin-top: 3em;
 }
 
-
-  /* Estilo del footer */
   footer {
     background-color: #333;
     padding: 20px;
@@ -202,7 +172,6 @@ section {
     color: white;
   }
 
-  /* Responsive */
   @media (max-width: 767px) {
     .header-text {
       font-size: 1.5rem;
