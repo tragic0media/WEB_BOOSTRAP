@@ -3,6 +3,7 @@ body {
     font-weight: bold;
     background-color: #1a1a1a;
     color: #eaff01;
+    overflow-x: hidden;
   }
 
 #header-artistas {
@@ -16,164 +17,194 @@ h3 {
   font-weight: 100;
 }
 
-  nav {
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    height: 3.8em;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-  }
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  height: 4em;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
 
-  nav a {
-    color: #ffffff;
-    font-weight: bold;
-  }
+nav a {
+  color: #ffffff;
+  font-weight: bold;
+}
 
-  .nav-item a {
-    color: #ffffff;
-    font-size: 2rem;
-    font-weight: 200;
-  }
+.nav-item a {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 200;
+}
 
-  .navbar-nav .nav-link {
-    position: relative;
-    color: #ffffff;
-    padding: 10px 15px;
-    transition: color 0.3s ease;
-    font-size: small;
-    font-family: "Rethink Sans", sans-serif;
-  }
-  
-  .navbar-nav .nav-link::before {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #eaff01; 
-    visibility: hidden;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .navbar-nav .nav-link:hover::before {
-    visibility: visible;
-    width: 100%;
-  }
-  
-  .navbar-nav .nav-link:hover {
-    color: #eaff01; 
-  }
-  
-  header {
-    height: 100vh;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #D2A0B0;
-    text-align: center;
-  }
+.navbar-nav .nav-link {
+  position: relative;
+  color: #ffffff;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+  font-size: large;
+  font-family: "Rethink Sans", sans-serif;
+}
 
-  header video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    filter: grayscale();
-  }
+.navbar-nav .nav-link::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 15%;
+  left: 0;
+  background-color: #eaff01; 
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
 
-  .header-text {
-    position: absolute;
-    bottom: 20px;
-    left: 10px;
-    right: 10px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 7rem;
-    font-weight: 900;
-  }
+.navbar-nav .nav-link:hover::before {
+  visibility: visible;
+  width: 100%;
+}
 
-  #countdown {
-    font-size: 5rem;
-    font-weight: 900;
-  }
+.navbar-nav .nav-link:hover {
+  color: #eaff01; 
+}
 
-  .card {
-    background-color: #D2A0B0;
-    color: black;
-  }
+.countdownbtn{
+  color: #eaff01;
+  border-color: #eaff01;
+  border-width: 0.2rem;
+  font-family: "Rethink Sans", sans-serif;
+  font-weight: 900;
+}
 
-  .card .btn {
-    background-color: white;
-    color: black;
-    transition: background-color 0.3s ease;
-  }
+.countdownbtn:hover{
+  color: #000000;
+  background-color: #eaff01;
+  border-color: #eaff01;
+  font-family: "Rethink Sans", sans-serif;
+}
 
-  .card .btn:hover {
-    background-color:  rgba(0, 0, 0, 0.5);
-    color: white;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  }
+.countdownbtn:active{
+  color: #000000 !important; 
+  border-color: #eaff01a1 !important;
+  background-color: #eaff01a1 !important;
+  font-family: "Rethink Sans", sans-serif;
+}
 
-  .card h3 {
-    color: #000000;
+header {
+  height: 90vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #eaff01;
+  text-align: center;
+  font-family: "Rethink Sans", sans-serif;
+}
+
+header video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: grayscale();
+}
+
+.header-text {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+#countdown {
+  font-size: 5rem;
+  font-weight: 900;
+  font-family: "Rethink Sans", sans-serif;
+}
+
+.card {
+  background-color: #eaff01;
+  color: black;
+  font-family: "Rethink Sans", sans-serif;
+}
+
+.card .btn {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s ease;
+  font-family: "Rethink Sans", sans-serif;
+}
+
+.card .btn:hover {
+  background-color:  rgba(0, 0, 0, 0.5);
+  color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  font-family: "Rethink Sans", sans-serif;
+}
+
+.card h3 {
+  color: #000000;
   font-size: 2em;
   font-weight: 300;
   margin-bottom: 2em;
-  }
+  font-family: "Rethink Sans", sans-serif;
+}
 
 .card h6 {
   font-size: 5em;
   font-weight: 100;
+  font-family: "Rethink Sans", sans-serif;
 }
 
-  .artista img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 20px;
-    transition: all 0.3s ease-in-out;
-  }
+.artista img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
 
 .artista img:hover {
   box-shadow: 0 0 20px rgba(91, 69, 69, 0.8);
 }
-  .accordion-button {
-    background-color: #D2A0B0;
-    font-size: 0.3em;
-  }
 
-  .accordion-body {
-    background-color: #D2A0B0;
-  }
+.accordion-button {
+  background-color: #eaff01;
+  font-size: 0.3em;
+}
 
-  .accordion-body img {
-    width: 400px;
-  }
+.accordion-body {
+  background-color: #eaff01;
+}
 
-  .maps {
-    filter: grayscale();
-  }
+.accordion-body img {
+  width: 400px;
+}
+
+.maps {
+  filter: grayscale();
+}
 
 section {
   margin-bottom: 3em;
   margin-top: 3em;
 }
 
-  footer {
-    background-color: #333;
-    padding: 20px;
-    text-align: center;
-    color: white;
-  }
+footer {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
 
-  @media (max-width: 767px) {
-    .header-text {
-      font-size: 1.5rem;
-    }
+@media (max-width: 767px) {
+  .header-text {
+    font-size: 1.5rem;
   }
+}
