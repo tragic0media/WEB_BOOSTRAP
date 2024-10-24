@@ -1,22 +1,14 @@
-
-
-
-
-
-/* Estilos personalizados */
 body {
     font-family: "Mulish", sans-serif;
     font-weight: bold;
     background-color: #1a1a1a;
-    color: #D2A0B0; /* Color rosa por defecto */
+    color: #eaff01;
     overflow-x: hidden;
   }
 
-h2 {
-  font-size: 7rem;
-  font-weight: 100;
+#header-artistas {
+  margin-top: 2em;
 }
-
 
 h3 {
   color: #ffffff;
@@ -25,440 +17,194 @@ h3 {
   font-weight: 100;
 }
 
-
-.section-title {
-  position: relative; /* Necesario para el posicionamiento del pseudoelemento */
-  display: inline-block; /* Permite aplicar el tamaño al texto */
-  color: #D2A0B0; /* Cambia el color del texto */
-  margin-bottom: 20px; /* Margen inferior para separación */
-  transition: color 0.3s ease; /* Transición del color del texto */
-}
-
-.section-title::after {
-  content: ""; /* Necesario para mostrar el pseudoelemento */
-  position: absolute; /* Posicionamiento absoluto */
-  left: 0; /* Alinear a la izquierda del título */
-  bottom: 0; /* Alinear al fondo del título */
-  width: 100%; /* Ancho igual al del texto */
-  height: 2px; /* Altura del delineado */
-  background-color: #D2A0B0; /* Color del delineado */
-  transform: scaleX(0); /* Comienza con escala en 0 */
-  transition: transform 0.3s ease; /* Transición suave para el escalado */
-}
-
-.section-title:hover::after {
-  transform: scaleX(1); /* Escala al 100% en hover */
-}
-
-  /* Sticky navbar */
-  
-  nav {
-    position: fixed;
-    z-index: 999;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-  }
-
-.navbar {
+nav {
   position: sticky;
+  top: 0;
   z-index: 999;
+  height: 4em;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+nav a {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.nav-item a {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  color: #ffffff;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+  font-size: large;
+  font-family: "Rethink Sans", sans-serif;
+}
+
+.navbar-nav .nav-link::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 15%;
+  left: 0;
+  background-color: #eaff01; 
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover::before {
+  visibility: visible;
   width: 100%;
 }
 
-  nav a {
-    color: #D2A0B0;
-    font-weight: bold;
-  }
+.navbar-nav .nav-link:hover {
+  color: #eaff01; 
+}
 
+.countdownbtn{
+  color: #eaff01;
+  border-color: #eaff01;
+  border-width: 0.2rem;
+  font-family: "Rethink Sans", sans-serif;
+  font-weight: 900;
+}
 
-  .nav-item a {
-    color: #D2A0B0;
-    font-size: 2rem;
-    font-weight: 200;
-  }
+.countdownbtn:hover{
+  color: #000000;
+  background-color: #eaff01;
+  border-color: #eaff01;
+  font-family: "Rethink Sans", sans-serif;
+}
 
-  .navbar-nav .nav-link {
-    position: relative;
-    color: #D2A0B0; /* Color rosa para el texto */
-    padding: 10px 15px;
-    transition: color 0.3s ease;
-  }
-  
-  /* Efecto de línea animada */
-  .navbar-nav .nav-link::before {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #ffffff; /* Color rosa de la línea */
-    visibility: hidden;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  /* Hover para mostrar la línea */
-  .navbar-nav .nav-link:hover::before {
-    visibility: visible;
-    opacity: 0.5;
-    width: 100%;
-  }
-  
-  .navbar-nav .nav-link:hover {
-    color: #ffffff; /* Cambia el color del texto en hover si deseas */
-  }
-  
-  .navbar-toggler-icon {
-    filter: brightness(0) saturate(100%) invert(71%) sepia(9%) saturate(917%) hue-rotate(289deg) brightness(96%) contrast(88%);
-  
-  }
-  
- 
- 
+.countdownbtn:active{
+  color: #000000 !important; 
+  border-color: #eaff01a1 !important;
+  background-color: #eaff01a1 !important;
+  font-family: "Rethink Sans", sans-serif;
+}
 
-  /* Estilo del botón del menú hamburguesa */
-  .navbar-toggler {
-    border: none; /* Elimina el borde predeterminado */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
-  }
+header {
+  height: 90vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #eaff01;
+  text-align: center;
+  font-family: "Rethink Sans", sans-serif;
+}
 
-  /* Delineado que aparece cuando el menú está abierto */
-  .navbar-toggler.collapsed {
-    border: none; /* Sin borde cuando está colapsado */
-  }
+header video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: grayscale();
+}
 
-  /* Delineado visible solo cuando el menú está abierto */
-  .navbar-toggler:not(.collapsed) {
-    border: 2px solid #D2A0B0; /* Cambia el color del delineado */
-    
-  }
+.header-text {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 4rem;
+  font-weight: 400;
+}
 
+#countdown {
+  font-size: 5rem;
+  font-weight: 900;
+  font-family: "Rethink Sans", sans-serif;
+}
 
+.card {
+  background-color: #eaff01;
+  color: black;
+  font-family: "Rethink Sans", sans-serif;
+}
 
-  
+.card .btn {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s ease;
+  font-family: "Rethink Sans", sans-serif;
+}
 
+.card .btn:hover {
+  background-color:  rgba(0, 0, 0, 0.5);
+  color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  font-family: "Rethink Sans", sans-serif;
+}
 
-  /* Estilos del header */
-  header {
-    height: 100vh;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #D2A0B0;
-    text-align: center;
-  }
-
-  header video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    filter: grayscale();
-  }
-
-  .header-text {
-    position: absolute;
-    bottom: 20px;
-    left: 10px;
-    right: 10px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 7rem;
-    font-weight: 900;
-  }
-
-  #fecha {
-    color: white;
-  }
-  
-
-
-  
-  /* Cuenta atrás */
-  #countdown {
-    font-family: "Orbitron", sans-serif;
-    font-size: 5rem;
-    font-weight: 700;
-  }
-
-
-  .countdownbtn {
-    background-color: white;
-    color: black;
-
-    transition: background-color 0.3s ease;
-    z-index: 99;
-  }
-
-  .countdownbtn:hover {
-    background-color: #b67f90;
-    color: white;
-    box-shadow: #b67f90;
-  }
-
-
-
-  /* Estilo de las cards */
-  .card {
-    background-color: #D2A0B0;
-    color: black;
-  }
-
-  .card .btn {
-    background-color: white;
-    color: black;
-    transition: background-color 0.3s ease;
-  }
-
-  .card .btn:hover {
-    background-color:  rgba(0, 0, 0, 0.5);
-    color: white;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  }
-  
-
-  .card h3 {
-    color: #000000;
+.card h3 {
+  color: #000000;
   font-size: 2em;
   font-weight: 300;
   margin-bottom: 2em;
-  }
-
+  font-family: "Rethink Sans", sans-serif;
+}
 
 .card h6 {
   font-size: 5em;
   font-weight: 100;
+  font-family: "Rethink Sans", sans-serif;
 }
 
-
-.card-sold-out {
-  opacity: 0.5; /* Baja opacidad */
-  position: relative; /* Necesario para posicionar el texto "SOLD OUT" */
+.artista img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
 }
-
-
-/* Estilos para el texto "SOLD OUT" */
-.sold-out-text {
-  position: absolute;
-  top: 50%;   /* Centra verticalmente */
-  left: 50%;  /* Centra horizontalmente */
-  transform: translate(-50%, -50%); /* Ajusta para que el centro sea el punto de referencia */
-  background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semi-transparente */
-  color: white; /* Texto en blanco */
-  padding: 10px 20px; /* Espaciado interno */
-  font-size: 2rem; /* Tamaño del texto */
-  font-weight: bold; /* Negrita */
-  z-index: 10; /* Coloca el texto sobre todo lo demás */
-  text-transform: uppercase; /* Texto en mayúsculas */
-  opacity: 1;
-}
-
-
-
-  /* Grid de artistas */
-  .artista img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 25px;
-    transition: all 0.3s ease-in-out;
-  }
 
 .artista img:hover {
-  filter: grayscale(100%);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
-}
-  .accordion-button {
-    background-color: #1a1a1a;
-    font-size: 0.3em;
-    color: #D2A0B0;
-    
-  }
-
-
-
-.accordion-button:not(.collapsed) {
-  background-color: #b67f90;  
-  color: white;              
+  box-shadow: 0 0 20px rgba(91, 69, 69, 0.8);
 }
 
-
-.accordion-collapse.show {
-  background-color: #D2A0B0; 
+.accordion-button {
+  background-color: #eaff01;
+  font-size: 0.3em;
 }
 
-
-.accordion-button:focus {
-  outline: none;
-  box-shadow: none; 
+.accordion-body {
+  background-color: #eaff01;
 }
 
-  .accordion-body {
-    background-color: #D2A0B0;
-    display: flex;
-    padding: 0;
-  }
-
-  .accordion-text {
-    padding: 1em;
-    font-weight: 500;
-  }
-
-  .accordion-body img {
-    width: auto;
-    height: 100%;
-  }
-
-  .accordion-body .btn {
-    background-color: white;
-    transition: background-color 0.3s ease;
- 
-  }
-
-
-
-
-  .accordion-body .btn:hover {
-  background-color:  rgba(0, 0, 0, 0.5);
-  color: white;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+.accordion-body img {
+  width: 400px;
 }
 
-
-  .maps {
-    filter: grayscale();
-  }
+.maps {
+  filter: grayscale();
+}
 
 section {
   margin-bottom: 3em;
   margin-top: 3em;
 }
 
-
-/* Estilos para el footer */
-.footer {
-  background-color: #0f0f0f; /* Fondo oscuro */
-  color: #ffffff; /* Texto blanco */
-  padding: 40px 0;
+footer {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+  color: white;
 }
 
-.footer h4, .footer h3 {
-  margin-bottom: 20px;
-  font-size: 4rem;
-  font-weight: 100;
-  color: #D2A0B0;
-}
-
-/* Estilo de los iconos de redes sociales */
-.social-icons a {
-  color: #ffffff; /* Color inicial de los iconos */
-  margin: 0 10px;
-  font-size: 50px;
-  transition: color 0.3s ease; /* Transición suave para el hover */
-}
-
-/* Color al hacer hover en los iconos */
-.social-icons a:hover {
-  
-    color: #D2A0B0;
-}
-
-/* Estilo de los enlaces (política, etc.) */
-.footer-links a {
-  color: #cccccc; /* Color inicial de los textos */
-  text-decoration: none;
-  margin: 0 10px;
-  transition: color 0.3s ease;
-}
-
-/* Color al hacer hover en los enlaces */
-.footer-links a:hover {
-  color: #D2A0B0; /* Cambia al color que desees en hover */
-}
-
-/* Logo */
-.footer-logo {
-  width: 100px;
-}
-
-
-
-
-
-
-  /* Responsive */
-
-
-
-
-  @media (max-width: 1400px) {
-   
-    .card h6 {
-      font-size: 4em;
-      font-weight: 100;
-    }
-    h2 {
-      font-size: 5rem;
-    }
-
-    .nav-item a {
-      color: #D2A0B0;
-      font-size: 1.5rem;
-      font-weight: 200;
-    }
-
-    
-  
+@media (max-width: 767px) {
+  .header-text {
+    font-size: 1.5rem;
   }
-
-  @media (max-width: 1200px) {
-   
-    #navbarNav {
-      margin-top: 2em;
-      margin-bottom: 3em;
-    }
-    
-
-    .header-text {
-      text-align: left;
-      margin-left: 0.1em;
-    }
-
-  }
-
-  @media (max-width: 767px) {
-    .header-text {
-      font-size: 5rem;
-      margin-left: 0.1em;
-    }
-
-
-    h2 {
-      font-size: 4rem;
-    }
-
-
-    .accordion-body {
-      display: flex;
-      flex-direction: column;
-    }
-
-    #countdown {
-      
-      font-size: 4rem;
-      
-    }
-  }
-
-  @media (max-width: 650px) {
-    
-    #countdown {
-      
-      font-size: 3rem;
-      
-    }
-  }
+}
