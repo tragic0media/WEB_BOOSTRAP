@@ -2,7 +2,7 @@ body {
     font-family: "Mulish", sans-serif;
     font-weight: bold;
     background-color: #1a1a1a;
-    color: #eaff01;
+    color: #ff01c0;
     overflow-x: hidden;
   }
 
@@ -53,7 +53,7 @@ nav a {
   height: 2px;
   bottom: 15%;
   left: 0;
-  background-color: #eaff01; 
+  background-color: #ff01c0; 
   visibility: hidden;
   transition: all 0.3s ease-in-out;
 }
@@ -64,12 +64,12 @@ nav a {
 }
 
 .navbar-nav .nav-link:hover {
-  color: #eaff01; 
+  color: #ff01c0; 
 }
 
 .countdownbtn{
-  color: #eaff01;
-  border-color: #eaff01;
+  color: #ff01c0;
+  border-color: #ff01c0;
   border-width: 0.2rem;
   font-family: "Rethink Sans", sans-serif;
   font-weight: 900;
@@ -77,15 +77,15 @@ nav a {
 
 .countdownbtn:hover{
   color: #000000;
-  background-color: #eaff01;
-  border-color: #eaff01;
+  background-color: #ff01c0;
+  border-color: #ff01c0;
   font-family: "Rethink Sans", sans-serif;
 }
 
 .countdownbtn:active{
   color: #000000 !important; 
-  border-color: #eaff01a1 !important;
-  background-color: #eaff01a1 !important;
+  border-color: #ff01c08a !important;
+  background-color: #ff01c08a !important;
   font-family: "Rethink Sans", sans-serif;
 }
 
@@ -95,7 +95,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #eaff01;
+  color: #ff01c0;
   text-align: center;
   font-family: "Rethink Sans", sans-serif;
 }
@@ -129,7 +129,7 @@ header video {
 }
 
 .card {
-  background-color: #eaff01;
+  background-color: #ff01c0;
   color: black;
   font-family: "Rethink Sans", sans-serif;
 }
@@ -175,12 +175,12 @@ header video {
 }
 
 .accordion-button {
-  background-color: #eaff01;
+  background-color: #ff01c0;
   font-size: 0.3em;
 }
 
 .accordion-body {
-  background-color: #eaff01;
+  background-color: #ff01c0;
 }
 
 .accordion-body img {
