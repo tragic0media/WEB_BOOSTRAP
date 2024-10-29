@@ -3,7 +3,7 @@
   const countdown = document.getElementById('countdown');
 
   // Establecer la fecha del evento
-  const eventDate = new Date('2024-12-31T00:00:00').getTime();
+  const eventDate = new Date('2025-08-31T00:00:00').getTime();
 
   // Actualizar la cuenta regresiva
   const updateCountdown = () => {
@@ -25,3 +25,27 @@
   };
 
   const countdownInterval = setInterval(updateCountdown, 1000);
+
+
+  // Función que ajusta los delays de AOS para pantallas pequeñas
+function adjustAOSDelay() {
+  var cards = document.querySelectorAll('.col-md-4'); // Selecciona los cards
+
+  if (window.innerWidth <= 768) {  // Si la pantalla es móvil (<=768px)
+    cards.forEach(function(card) {
+      card.setAttribute('data-aos-delay', '200');  // Asigna un delay de 200 a todos
+    });
+  } else {  // Pantallas grandes
+    cards[0].setAttribute('data-aos-delay', '200');
+    cards[1].setAttribute('data-aos-delay', '400');
+    cards[2].setAttribute('data-aos-delay', '600');
+  }
+
+  // Forzar que AOS se vuelva a inicializar para aplicar los cambios
+  AOS.refresh();
+}
+
+// Ejecuta la función al cargar la página y al redimensionar la ventana
+window.addEventListener('load', adjustAOSDelay);
+window.addEventListener('resize', adjustAOSDelay);
+
