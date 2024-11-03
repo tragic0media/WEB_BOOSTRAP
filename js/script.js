@@ -49,3 +49,22 @@ function adjustAOSDelay() {
 window.addEventListener('load', adjustAOSDelay);
 window.addEventListener('resize', adjustAOSDelay);
 
+
+const productInfo = [
+  { price: "$19.99", description: "Bandera Riverland" },
+  { price: "$14.99", description: "Camiseta Riverland" },
+  { price: "$34.99", description: "Sudadera Riverland" }
+];
+
+const carousel = document.querySelector("#productCarousel");
+const priceText = document.getElementById("productPrice");
+const descriptionText = document.getElementById("productDescription");
+
+carousel.addEventListener("slide.bs.carousel", function(event) {
+  const nextIndex = event.to;
+  const { price, description } = productInfo[nextIndex];
+  priceText.innerText = price;
+  descriptionText.innerText = description;
+});
+
+
