@@ -49,3 +49,37 @@ function adjustAOSDelay() {
 window.addEventListener('load', adjustAOSDelay);
 window.addEventListener('resize', adjustAOSDelay);
 
+document.addEventListener('DOMContentLoaded', function () {
+  const newsletterForm = document.getElementById('newsletterForm');
+  const emailInput = document.getElementById('email');
+  const successMessage = document.getElementById('successMessage');
+
+  //Validación y el envío del formulario
+  newsletterForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      // Reinicia la clase de validación
+      newsletterForm.classList.remove('was-validated');
+
+      // Verifica si el formulario es válido
+      if (newsletterForm.checkValidity()) {
+          // Si el formulario es válido, muestra el mensaje de éxito
+          successMessage.classList.remove('d-none');
+          successMessage.classList.add('d-block');
+
+          // Limpia el formulario 
+          newsletterForm.reset();
+          newsletterForm.classList.remove('was-validated');
+
+      } else {
+          // Si el formulario no es válido
+          newsletterForm.classList.add('was-validated');
+      }
+  });
+
+  // Ocultar el mensaje de éxito cuando el usuario comienza a escribir nuevamente
+  emailInput.addEventListener('input', function () {
+      successMessage.classList.add('d-none');
+  });
+});
