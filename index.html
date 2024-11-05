@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RIVERLAND 2024</title>
-    <link rel="icon" href="img/RRiverland.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
-        </style>
-    <link rel="stylesheet" href="css\styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RIVERLAND 2024</title>
+  <link rel="icon" href="img/RRiverland.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="css\styles.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
 </head>
 
 <body>
 
-<nav class="navbar sticky-top navbar-expand-xl">
+  <!-- NAVBAR -->
+  <nav class="navbar sticky-top navbar-expand-xl">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#top"><img src="img/RRiverland.png" alt="Riverland" class="img-fluid w-25"></a>
+
+      <a class="navbar-brand px-4" href="#top"><img src="img/RRiverland.png" alt="Riverland"></a>
+
       <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse justify-content-end container-fluid" id="navbarNav">
         <ul class="navbar-nav">
+
           <li class="nav-item px-5">
             <a class="nav-link" href="index.html#ubicacion">FESTIVAL</a>
           </li>
@@ -41,11 +46,12 @@
     </div>
   </nav>
   
-  <!-- Header -->
+  <!-- HEADER -->
   <header id="top">
     <video autoplay muted loop>
       <source src="img\aftermovie.mp4" type="video/mp4">
     </video>
+
     <div>
       <div id="countdown">00:00:00</div>
       <div class="col-12 text-center">
@@ -57,17 +63,17 @@
       <div class="col text-start px-5 mx-5">
         <a >RIVERLAND</a>
       </div>
+
       <div class="col text-end px-5 mx-5">
         <a>22.08.24</a>
       </div>
-      
-      
     </div>
   </header>
   
   <div class="container mt-5">
     <h2>¡No te pierdas ninguna noticia!</h2>
     <h3 data-aos="fade-up">Suscríbete a nuestra newsletter y recibe antes que nadie todas las novedades del festival.</h3>
+    
     <!-- Formulario de inscripción -->
     <form id="newsletterForm" class="needs-validation" novalidate>
         <div class="form-group">
@@ -84,57 +90,55 @@
     <div id="successMessage" class="alert alert-success mt-3 d-none" role="alert">
         ¡Gracias por suscribirte a nuestra newsletter!
     </div>
-</div>
+  </div>
 
-<!-- Sección de Ubicación -->
-<section id="ubicacion" class="py-5">
+  <!-- Sección de Ubicación -->
+  <section id="ubicacion" class="py-5">
     <div class="container">
       <h2 class="mb-5 section-title" data-aos="fade-up">ENCUÉNTRANOS</h2>
       <h3 data-aos="fade-up">Riverland se celebra cada verano en El Valle de la Música, un verdadero paraíso natural enclavado en el entorno del Río Sella, recurso económico y generador de riqueza en la Comarca de los Picos de Europa, situado entre las localidades de Arriondas y Cangas de Onís (Principado de Asturias, España).</h3>
-     
+      
       <div class="row">
+        <!-- GOOGLE MAPS-->
         <div class="col-md-6 mb-4 maps" data-aos="fade-right">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2899.1549683730705!2d-5.179634087106578!3d43.39469027099521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3619d57b48959d%3A0xb517f7b85a38b6b6!2sRiverland%20Fest!5e0!3m2!1ses!2ses!4v1729520133208!5m2!1ses!2ses" width="100%" height="350" style="border-radius:5px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
+        <!-- SPOTIFY -->
         <div class="col-md-6 mb-4" data-aos="fade-left">
           <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1m7MboCq5HiEr4EWu2oqoy?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
       </div>
     </div>
   </section>
-  
+    
+  <!-- FOOTER -->
   <footer class="footer-blur text-center mt-5">
-    <div class="social-icons mb-3 d-flex justify-content-center align-items-center">
-      <img src="img/Riverland_LogoBlanco.png" alt="Logo Riverland">
-      <a href="https://www.instagram.com/riverland.fest/" target="_blank"><i class="bi bi-instagram"></i></a>
-      <a href="https://x.com/RVLNDFEST" target="_blank"><i class="bi bi-twitter"></i></a>
-      <a href="https://www.tiktok.com/@riverland.fest" target="_blank"><i class="bi bi-tiktok"></i></a>
-    </div>
+      <div class="social-icons mb-3 d-flex justify-content-center align-items-center">
+        <img src="img/Riverland_LogoBlanco.png" alt="Logo Riverland">
+        <a href="https://www.instagram.com/riverland.fest/" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://x.com/RVLNDFEST" target="_blank"><i class="bi bi-twitter"></i></a>
+        <a href="https://www.tiktok.com/@riverland.fest" target="_blank"><i class="bi bi-tiktok"></i></a>
+      </div>
 
-    <div class="footer-links mb-4">
-        <a class="mx-3" >Condiciones generales</a>
-        <a class="mx-3">Políticas de privacidad</a>
-        <a class="mx-3">Política de cookies</a>
-        <a class="mx-3">Aviso Legal</a>
-        <a class="mx-3">Accesibilidad</a>
-    </div>
-</footer>
+      <div class="footer-links mb-4">
+          <a class="mx-3" >Condiciones generales</a>
+          <a class="mx-3">Políticas de privacidad</a>
+          <a class="mx-3">Política de cookies</a>
+          <a class="mx-3">Aviso Legal</a>
+          <a class="mx-3">Accesibilidad</a>
+      </div>
+  </footer>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
-
-<!-- AOS JS -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="js\script.js"></script>
-
-
 
 </body>
 </html>
