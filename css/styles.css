@@ -8,7 +8,7 @@ body {
     font-family: "Mulish", sans-serif;
     font-weight: bold;
     background-color: #1a1a1a;
-    color: #D2A0B0; /* Color rosa por defecto */
+    color: #d184aa; /* Color rosa por defecto */
     overflow-x: hidden;
   }
 
@@ -29,7 +29,7 @@ h3 {
 .section-title {
   position: relative; /* Necesario para el posicionamiento del pseudoelemento */
   display: inline-block; /* Permite aplicar el tamaño al texto */
-  color: #D2A0B0; /* Cambia el color del texto */
+  color: #d184aa; /* Cambia el color del texto */
   margin-bottom: 20px; /* Margen inferior para separación */
   transition: color 0.3s ease; /* Transición del color del texto */
 }
@@ -41,7 +41,7 @@ h3 {
   bottom: 0; /* Alinear al fondo del título */
   width: 100%; /* Ancho igual al del texto */
   height: 2px; /* Altura del delineado */
-  background-color: #D2A0B0; /* Color del delineado */
+  background-color: #d184aa; /* Color del delineado */
   transform: scaleX(0); /* Comienza con escala en 0 */
   transition: transform 0.3s ease; /* Transición suave para el escalado */
 }
@@ -66,23 +66,28 @@ h3 {
 }
 
   nav a {
-    color: #D2A0B0;
+    color: #d184aa;
     font-weight: bold;
   }
 
 
   .nav-item a {
-    color: #D2A0B0;
+    color: #d184aa;
     font-size: 2rem;
     font-weight: 200;
   }
 
   .navbar-nav .nav-link {
     position: relative;
-    color: #D2A0B0; /* Color rosa para el texto */
+    color: #d184aa; /* Color rosa para el texto */
     padding: 10px 15px;
     transition: color 0.3s ease;
   }
+
+  .navbar-brand img {
+    height: 70px;
+  }
+
   
   /* Efecto de línea animada */
   .navbar-nav .nav-link::before {
@@ -129,7 +134,7 @@ h3 {
 
   /* Delineado visible solo cuando el menú está abierto */
   .navbar-toggler:not(.collapsed) {
-    border: 2px solid #D2A0B0; /* Cambia el color del delineado */
+    border: 2px solid #d184aa; /* Cambia el color del delineado */
     
   }
 
@@ -145,7 +150,7 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #D2A0B0;
+    color: #d184aa;
     text-align: center;
   }
 
@@ -187,37 +192,44 @@ h3 {
 
 
   .countdownbtn {
-    background-color: white;
-    color: black;
-
+    
+    color: #d184aa;
+    border-color: #d184aa;
+    border-width: 0.2rem;
     transition: background-color 0.3s ease;
     z-index: 99;
+    font-weight: 700;
   }
 
   .countdownbtn:hover {
-    background-color: #b67f90;
-    color: white;
-    box-shadow: #b67f90;
+    background-color: #d184aa;
+    color: rgb(255, 255, 255);
+    
+    
   }
 
 
 
   /* Estilo de las cards */
   .card {
-    background-color: #D2A0B0;
+    background-color: #d184aa;
     color: black;
   }
 
   .card .btn {
-    background-color: white;
-    color: black;
+    color: #964e72;
+    background-color: #ffffff;
+    border-color: #1a1a1a;
+    border-width: 0.1rem;
     transition: background-color 0.3s ease;
+    font-weight: 500;
   }
 
   .card .btn:hover {
-    background-color:  rgba(0, 0, 0, 0.5);
+    background-color:  #964e72;
     color: white;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-color: #1a1a1a;
+    
   }
   
 
@@ -271,25 +283,25 @@ h3 {
 
 .artista img:hover {
   filter: none;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 20px #d184aa;
 }
   .accordion-button {
     background-color: #1a1a1a;
     font-size: 0.3em;
-    color: #D2A0B0;
+    color: #d184aa;
     
   }
 
 
 
 .accordion-button:not(.collapsed) {
-  background-color: #b67f90;  
+  background-color: #964e72;  
   color: white;              
 }
 
 
 .accordion-collapse.show {
-  background-color: #D2A0B0; 
+  background-color: #d184aa; 
 }
 
 
@@ -299,13 +311,13 @@ h3 {
 }
 
   .accordion-body {
-    background-color: #D2A0B0;
+    background-color: #d184aa;
     display: flex;
     padding: 0;
   }
 
   .accordion-text {
-    padding: 1em;
+    
     font-weight: 500;
   }
 
@@ -314,20 +326,27 @@ h3 {
     height: 100%;
   }
 
+
   .accordion-body .btn {
-    background-color: white;
+    color: #964e72;
+    background-color: #ffffff;
+    border-color: #1a1a1a;
+    border-width: 0.1rem;
     transition: background-color 0.3s ease;
- 
+    font-weight: 500;
+    margin-left: 3em;
+    margin-bottom: 2em;
+  }
+
+  .accordion-body .btn:hover {
+    background-color:  #964e72;
+    color: white;
+    border-color: #1a1a1a;
+    
   }
 
 
-
-
-  .accordion-body .btn:hover {
-  background-color:  rgba(0, 0, 0, 0.5);
-  color: white;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-}
+  
 
 
   .maps {
@@ -357,16 +376,38 @@ section {
 }
 
 .carousel-indicators .active {
-  background-color: #D2A0B0;
+  background-color: #d184aa;
 }
 
 .carousel-control-next-icon {
-  color: #D2A0B0;
+  color: #d184aa;
 }
 
 .carousel-caption h5 {
     color: #000000;
 }
+
+
+
+.merchprice h6 {
+  font-size: 3em;
+  font-weight: 100;
+}
+
+.descriptiontexto {
+  font-size: 3em;
+  font-weight: 100;
+}
+
+.merchprice .productomerch {
+  color: #d184aa;
+}
+
+.merchprice h6 {
+  color: #ffffff;
+}
+
+
 
 
 /* Estilos para el footer */
@@ -380,7 +421,7 @@ section {
   margin-bottom: 20px;
   font-size: 4rem;
   font-weight: 100;
-  color: #D2A0B0;
+  color: #d184aa;
 }
 
 /* Estilo de los iconos de redes sociales */
@@ -394,7 +435,7 @@ section {
 /* Color al hacer hover en los iconos */
 .social-icons a:hover {
   
-    color: #D2A0B0;
+    color: #d184aa;
 }
 
 /* Estilo de los enlaces (política, etc.) */
@@ -414,7 +455,7 @@ section {
   bottom: 0; /* Alinear al fondo del título */
   width: 100%; /* Ancho igual al del texto */
   height: 2px; /* Altura del delineado */
-  background-color: #D2A0B0; /* Color del delineado */
+  background-color: #d184aa; /* Color del delineado */
   transform: scaleX(0); /* Comienza con escala en 0 */
   transition: transform 0.3s ease; /* Transición suave para el escalado */
   
@@ -426,7 +467,7 @@ section {
 }
 
 .footer-txt:hover {
-  color: #D2A0B0;
+  color: #d184aa;
 }
 
 /* Logo */
@@ -455,7 +496,7 @@ section {
     }
 
     .nav-item a {
-      color: #D2A0B0;
+      color: #d184aa;
       font-size: 1.5rem;
       font-weight: 200;
     }
@@ -467,13 +508,13 @@ section {
   @media (max-width: 1200px) {
    
     #navbarNav {
-      margin-top: 2em;
+      
       margin-bottom: 3em;
       position: fixed;
-      top: 94px;
+      top: 112px;
       left: 0px;
       background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(100px);
+    backdrop-filter: blur(10px);
     }
     
     
@@ -489,6 +530,15 @@ section {
       text-align: left;
       margin-left: 0.1em;
     }
+
+
+    .accordion-body img {
+      width: auto;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
 
   }
 

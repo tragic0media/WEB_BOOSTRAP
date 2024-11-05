@@ -50,6 +50,13 @@ window.addEventListener('load', adjustAOSDelay);
 window.addEventListener('resize', adjustAOSDelay);
 
 
+
+
+
+
+
+
+
 const productInfo = [
   { price: "$19.99", description: "Bandera Riverland" },
   { price: "$14.99", description: "Camiseta Riverland" },
@@ -57,12 +64,14 @@ const productInfo = [
 ];
 
 const carousel = document.querySelector("#productCarousel");
-const priceText = document.getElementById("productPrice");
-const descriptionText = document.getElementById("productDescription");
+const priceText = document.querySelector("#productPrice h6");
+const descriptionText = document.querySelector("#productDescription h6");
 
 carousel.addEventListener("slide.bs.carousel", function(event) {
   const nextIndex = event.to;
   const { price, description } = productInfo[nextIndex];
+  
+  // Actualiza solo el contenido de texto interno, sin reemplazar los elementos h6
   priceText.innerText = price;
   descriptionText.innerText = description;
 });
