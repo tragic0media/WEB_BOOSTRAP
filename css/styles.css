@@ -55,7 +55,7 @@ h3 {
   nav {
     position: fixed;
     z-index: 999;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(10px);
   }
 
@@ -472,9 +472,13 @@ section {
 
 /* Logo */
 .footer-logo {
-  width: 100px;
+  width: 60px;
 }
 
+
+.footer h3 {
+  font-size: 3em;
+}
 
 
 
@@ -513,7 +517,7 @@ section {
       position: fixed;
       top: 112px;
       left: 0px;
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(10px);
     }
     
