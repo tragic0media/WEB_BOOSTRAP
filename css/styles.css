@@ -1,29 +1,57 @@
 body {
-    font-family: "Mulish", sans-serif;
-    font-weight: bold;
-    background-color: #1a1a1a;
-    color: #ff01c0;
-    overflow-x: hidden;
-  }
-
-#header-artistas {
-  margin-top: 2em;
+  font-family: "Rethink Sans", sans-serif;
+  font-weight: bold;
+  background-color: #1a1a1a;
+  color: #ff01c0;
+  overflow-x: hidden;
 }
 
 h3 {
   color: #ffffff;
   font-size: 1.5em;
-  margin-bottom: 4em;
   font-weight: 100;
 }
 
+#header-artistas {
+  margin-top: 2em;
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  color: #ff01c0;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ff01c0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.section-title:hover::after {
+  transform: scaleX(1);
+}
+
+/* NAVBAR STYLES */
+
 nav {
   position: sticky;
-  top: 0;
   z-index: 999;
-  height: 4em;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
+}
+
+.navbar-brand img {
+  width:  50px;
+  height: 50px;
 }
 
 nav a {
@@ -38,12 +66,13 @@ nav a {
 }
 
 .navbar-nav .nav-link {
-  position: relative;
-  color: #ffffff;
-  padding: 10px 15px;
-  transition: color 0.3s ease;
   font-size: large;
   font-family: "Rethink Sans", sans-serif;
+  
+  position: relative;
+  color: #ffffff;
+  padding: 10px 10px;
+  transition: color 0.3s ease;
 }
 
 .navbar-nav .nav-link::before {
@@ -51,7 +80,7 @@ nav a {
   position: absolute;
   width: 0;
   height: 2px;
-  bottom: 15%;
+  bottom: 0;
   left: 0;
   background-color: #ff01c0; 
   visibility: hidden;
@@ -60,12 +89,32 @@ nav a {
 
 .navbar-nav .nav-link:hover::before {
   visibility: visible;
+  opacity: 0.5;
   width: 100%;
 }
 
 .navbar-nav .nav-link:hover {
   color: #ff01c0; 
 }
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,1,192, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler {
+  border: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-toggler.collapsed {
+  border: none;
+}
+
+.navbar-toggler:not(.collapsed) {
+  border: 2px solid #ff01c0;
+}
+
+/* HEADER STYLES */
 
 .countdownbtn{
   color: #ff01c0;
@@ -128,6 +177,47 @@ header video {
   font-family: "Rethink Sans", sans-serif;
 }
 
+.email_form label {
+  font-size: 2rem;
+}
+
+.email_form input {
+  color: #ff01c0;
+  background-color: #00000000;
+  border-color: #ff01c0;
+  border-width: 0.2rem;
+  font-family: "Rethink Sans", sans-serif;
+  font-weight: 900;
+  
+}
+.email_form input::placeholder{
+  color: #ff01c0;
+  background-color: #00000000;
+  border-color: #ff01c0;
+  border-width: 0.2rem;
+  font-family: "Rethink Sans", sans-serif;
+  font-weight: 900;
+  
+}
+
+.email_form button {
+  color: #ffffff;
+  background-color: #ff01c0;
+  border-color: #ffffff;
+  border-width: 0.1rem;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+}
+
+.email_form button:hover {
+  background-color:  #860065;
+  color: white;
+  border-color: #ffffff;
+  
+}
+
+/* CARDS STYLES */
+
 .card {
   background-color: #ff01c0;
   color: black;
@@ -148,6 +238,10 @@ header video {
   font-family: "Rethink Sans", sans-serif;
 }
 
+.card_body p {
+  font-family: "Rethink Sans", sans-serif;
+}
+
 .card h3 {
   color: #000000;
   font-size: 2em;
@@ -162,29 +256,140 @@ header video {
   font-family: "Rethink Sans", sans-serif;
 }
 
+.card-sold-out {
+  opacity: 0.5;
+  position: relative;
+}
+
+.sold-out-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  z-index: 10;
+  text-transform: uppercase;
+  opacity: 1;
+  font-family: "Rethink Sans", sans-serif;
+}
+
+/* ARTISTIST STYLES */
+
 .artista img {
   width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: 20px;
   transition: all 0.3s ease-in-out;
+  filter: grayscale(60%);
 }
 
 .artista img:hover {
-  box-shadow: 0 0 20px rgba(91, 69, 69, 0.8);
+filter: none;
+box-shadow: 0 0 10px #ff01c0;
+}
+/* MERCHAN  */
+.merch-section {
+  padding: 40px 0;
+  
+  text-align: center;
 }
 
-.accordion-button {
+.carousel-indicators .active {
   background-color: #ff01c0;
-  font-size: 0.3em;
+}
+
+.carousel-control-next-icon {
+  color: #ff01c0;
+}
+
+.carousel-caption h5 {
+    color: #000000;
+}
+
+.merchprice h6 {
+  font-size: 3em;
+  font-weight: 100;
+}
+
+.descriptiontexto {
+  font-size: 3em;
+  font-weight: 100;
+}
+
+.merchprice .productomerch {
+  color: #ff01c0;
+}
+
+.merchprice h6 {
+  color: #ffffff;
+}
+
+/* ACORDEON */
+
+.accordion-button {
+  background-color: #1a1a1a;
+  font-size: 1em;
+  color: #ff01c0;
+}
+
+
+
+.accordion-button:not(.collapsed) {
+background-color: #ff01c0;  
+color: white;              
+}
+
+
+.accordion-collapse.show {
+background-color: #860065; 
+}
+
+
+.accordion-button:focus {
+outline: none;
+box-shadow: none; 
 }
 
 .accordion-body {
-  background-color: #ff01c0;
+  background-color: #860065;
+  display: flex;
+  
+  padding: 0;
+}
+
+.accordion-text {
+  color: white;
+  font-weight: 500;
 }
 
 .accordion-body img {
-  width: 400px;
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.accordion-body .btn {
+  color: #ffffff;
+  background-color: #ff01c0;
+  border-color: #ffffff;
+  border-width: 0.1rem;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+  margin-left: 3em;
+  margin-bottom: 2em;
+}
+
+.accordion-body .btn:hover {
+  background-color:  #860065;
+  color: white;
+  border-color: #ffffff;
+  
 }
 
 .maps {
@@ -196,18 +401,26 @@ section {
   margin-top: 3em;
 }
 
+@media (max-width: 767px) {
+  .header-text {
+    font-size: 1.5rem;
+  }
+
+  .accordion-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+/* FOOTER */
+
 footer {
   background-color: #333;
   padding: 20px;
   text-align: center;
   font-family: "Rethink Sans", sans-serif;
   color: white;
-}
-
-@media (max-width: 767px) {
-  .header-text {
-    font-size: 1.5rem;
-  }
 }
 
 .footer-blur {
