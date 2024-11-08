@@ -1,5 +1,5 @@
 body {
-  font-family: "Mulish", sans-serif;
+  font-family: "Rethink Sans", sans-serif;
   font-weight: bold;
   background-color: #1a1a1a;
   color: #ff01c0;
@@ -9,12 +9,35 @@ body {
 h3 {
   color: #ffffff;
   font-size: 1.5em;
-  margin-bottom: 4em;
   font-weight: 100;
 }
 
 #header-artistas {
   margin-top: 2em;
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  color: #ff01c0;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ff01c0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.section-title:hover::after {
+  transform: scaleX(1);
 }
 
 /* NAVBAR STYLES */
@@ -75,7 +98,7 @@ nav a {
 }
 
 .navbar-toggler-icon {
-  filter: brightness(0) saturate(100%) invert(71%) sepia(9%) saturate(917%) hue-rotate(289deg) brightness(96%) contrast(88%);
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,1,192, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 .navbar-toggler {
@@ -88,7 +111,7 @@ nav a {
 }
 
 .navbar-toggler:not(.collapsed) {
-  border: 2px solid #D2A0B0;
+  border: 2px solid #ff01c0;
 }
 
 /* HEADER STYLES */
@@ -154,6 +177,45 @@ header video {
   font-family: "Rethink Sans", sans-serif;
 }
 
+.email_form label {
+  font-size: 2rem;
+}
+
+.email_form input {
+  color: #ff01c0;
+  background-color: #00000000;
+  border-color: #ff01c0;
+  border-width: 0.2rem;
+  font-family: "Rethink Sans", sans-serif;
+  font-weight: 900;
+  
+}
+.email_form input::placeholder{
+  color: #ff01c0;
+  background-color: #00000000;
+  border-color: #ff01c0;
+  border-width: 0.2rem;
+  font-family: "Rethink Sans", sans-serif;
+  font-weight: 900;
+  
+}
+
+.email_form button {
+  color: #ffffff;
+  background-color: #ff01c0;
+  border-color: #ffffff;
+  border-width: 0.1rem;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+}
+
+.email_form button:hover {
+  background-color:  #860065;
+  color: white;
+  border-color: #ffffff;
+  
+}
+
 /* CARDS STYLES */
 
 .card {
@@ -173,6 +235,10 @@ header video {
   background-color:  rgba(0, 0, 0, 0.5);
   color: white;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  font-family: "Rethink Sans", sans-serif;
+}
+
+.card_body p {
   font-family: "Rethink Sans", sans-serif;
 }
 
@@ -219,25 +285,111 @@ header video {
   object-fit: cover;
   border-radius: 20px;
   transition: all 0.3s ease-in-out;
+  filter: grayscale(60%);
 }
 
 .artista img:hover {
-  box-shadow: 0 0 20px rgba(91, 69, 69, 0.8);
+filter: none;
+box-shadow: 0 0 10px #ff01c0;
+}
+/* MERCHAN  */
+.merch-section {
+  padding: 40px 0;
+  
+  text-align: center;
+}
+
+.carousel-indicators .active {
+  background-color: #ff01c0;
+}
+
+.carousel-control-next-icon {
+  color: #ff01c0;
+}
+
+.carousel-caption h5 {
+    color: #000000;
+}
+
+.merchprice h6 {
+  font-size: 3em;
+  font-weight: 100;
+}
+
+.descriptiontexto {
+  font-size: 3em;
+  font-weight: 100;
+}
+
+.merchprice .productomerch {
+  color: #ff01c0;
+}
+
+.merchprice h6 {
+  color: #ffffff;
 }
 
 /* ACORDEON */
 
 .accordion-button {
-  background-color: #ff01c0;
-  font-size: 0.3em;
+  background-color: #1a1a1a;
+  font-size: 1em;
+  color: #ff01c0;
+}
+
+
+
+.accordion-button:not(.collapsed) {
+background-color: #ff01c0;  
+color: white;              
+}
+
+
+.accordion-collapse.show {
+background-color: #860065; 
+}
+
+
+.accordion-button:focus {
+outline: none;
+box-shadow: none; 
 }
 
 .accordion-body {
-  background-color: #ff01c0;
+  background-color: #860065;
+  display: flex;
+  
+  padding: 0;
+}
+
+.accordion-text {
+  color: white;
+  font-weight: 500;
 }
 
 .accordion-body img {
-  width: 400px;
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.accordion-body .btn {
+  color: #ffffff;
+  background-color: #ff01c0;
+  border-color: #ffffff;
+  border-width: 0.1rem;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+  margin-left: 3em;
+  margin-bottom: 2em;
+}
+
+.accordion-body .btn:hover {
+  background-color:  #860065;
+  color: white;
+  border-color: #ffffff;
+  
 }
 
 .maps {
@@ -253,6 +405,12 @@ section {
   .header-text {
     font-size: 1.5rem;
   }
+
+  .accordion-body {
+    display: flex;
+    flex-direction: column;
+  }
+
 }
 
 /* FOOTER */
