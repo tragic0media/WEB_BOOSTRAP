@@ -6,10 +6,17 @@ body {
   overflow-x: hidden;
 }
 
+h2{
+  font-size: 3rem;
+  
+}
+
 h3 {
   color: #ffffff;
   font-size: 1.5em;
   font-weight: 100;
+  padding-bottom: 1em;
+  text-align: justify;
 }
 
 #header-artistas {
@@ -168,11 +175,11 @@ header video {
   display: flex;
   justify-content: space-between;
   font-size: 4rem;
-  font-weight: 400;
+  font-weight: 900;
 }
 
 #countdown {
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 900;
   font-family: "Rethink Sans", sans-serif;
 }
@@ -207,6 +214,7 @@ header video {
   border-width: 0.1rem;
   transition: background-color 0.3s ease;
   font-weight: 500;
+  float: right; 
 }
 
 .email_form button:hover {
@@ -217,6 +225,11 @@ header video {
 }
 
 /* CARDS STYLES */
+
+.gobierno-img img {
+  height: 50px;
+  margin-right: 20px;
+}
 
 .card {
   background-color: #ff01c0;
@@ -316,16 +329,12 @@ box-shadow: 0 0 10px #ff01c0;
   font-weight: 100;
 }
 
-.descriptiontexto {
+.merchprice .productomerch {
   font-size: 3em;
   font-weight: 100;
 }
 
-.merchprice .productomerch {
-  color: #ff01c0;
-}
-
-.merchprice h6 {
+.precio {
   color: #ffffff;
 }
 
@@ -401,18 +410,6 @@ section {
   margin-top: 3em;
 }
 
-@media (max-width: 767px) {
-  .header-text {
-    font-size: 1.5rem;
-  }
-
-  .accordion-body {
-    display: flex;
-    flex-direction: column;
-  }
-
-}
-
 /* FOOTER */
 
 footer {
@@ -451,4 +448,28 @@ footer {
 .footer-images img {
   height: 50px;
   margin: 0 10px;
+}
+
+/* MEDIA */
+
+@media (max-width: 767px) {
+
+  .accordion-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  #countdown {
+    font-size: 3.5rem;
+  }
+
+  .merchprice .productomerch {
+    font-size: 2em;
+    font-weight: 100;
+  }
+
 }
