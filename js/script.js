@@ -29,7 +29,7 @@
 
   // Función que ajusta los delays de AOS para pantallas pequeñas
 function adjustAOSDelay() {
-  var cards = document.querySelectorAll('.col-md-4'); // Selecciona los cards
+  var cards = document.querySelectorAll('artista'); // Selecciona los cards
 
   if (window.innerWidth <= 768) {  // Si la pantalla es móvil (<=768px)
     cards.forEach(function(card) {
@@ -85,9 +85,9 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 const productInfo = [
-  { price: "$19.99", description: "Bandera Riverland" },
-  { price: "$14.99", description: "Camiseta Riverland" },
-  { price: "$34.99", description: "Sudadera Riverland" }
+  { price: "19.99€", description: "Bandera Riverland" },
+  { price: "14.99€", description: "Camiseta Riverland" },
+  { price: "34.99€", description: "Sudadera Riverland" }
 ];
 
 const carousel = document.querySelector("#productCarousel");
