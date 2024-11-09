@@ -401,18 +401,6 @@ section {
   margin-top: 3em;
 }
 
-@media (max-width: 767px) {
-  .header-text {
-    font-size: 1.5rem;
-  }
-
-  .accordion-body {
-    display: flex;
-    flex-direction: column;
-  }
-
-}
-
 /* FOOTER */
 
 footer {
@@ -451,4 +439,26 @@ footer {
 .footer-images img {
   height: 50px;
   margin: 0 10px;
+}
+
+/* MEDIA */
+
+@media (max-width: 767px) {
+  .header-text {
+    font-size: 1.5rem;
+  }
+
+  .accordion-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  #countdown {
+    font-size: 3.5rem;
+  }
+
 }
