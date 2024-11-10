@@ -7,7 +7,9 @@ body {
 }
 
 h2{
-  font-size: 3rem;
+  font-size: 6rem;
+  font-family: "VT323", monospace;
+  font-weight: 400;
 }
 
 h3 {
@@ -28,6 +30,8 @@ h3 {
   color: #ff8fcb;
   margin-bottom: 20px;
   transition: color 0.3s ease;
+  font-family: "VT323", monospace;
+  font-weight: 400;
 }
 
 .section-title::after {
@@ -168,12 +172,14 @@ header video {
   display: flex;
   justify-content: space-between;
   font-size: 4rem;
-  font-weight: 900;
+  font-family: "VT323", monospace;
+  font-weight: 400;
 }
 
 #countdown {
-  font-size: 4rem;
-  font-weight: 900;
+  font-size: 6rem;
+  font-family: "VT323", monospace;
+  font-weight: 400;
 }
 
 .email_form label {
@@ -185,17 +191,12 @@ header video {
   background-color: #00000000;
   border-color: #ff8fcb;
   border-width: 0.2rem;
-  font-family: "Rethink Sans", sans-serif;
-  font-weight: 900;
-  
 }
 .email_form input::placeholder{
   color: #ff8fcb;
   background-color: #00000000;
   border-color: #ff8fcb;
   border-width: 0.2rem;
-  font-family: "Rethink Sans", sans-serif;
-  font-weight: 900;
   
 }
 
@@ -278,7 +279,6 @@ header video {
   z-index: 10;
   text-transform: uppercase;
   opacity: 1;
-  font-family: "Rethink Sans", sans-serif;
 }
 
 /* ARTISTIST STYLES */
@@ -472,12 +472,16 @@ footer {
     flex-direction: column;
   }
 
+  h2 {
+    font-size: 4rem;
+  }
+
   h3 {
     font-size: 1em;
   }
 
   #countdown {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
 
   .merchprice .productomerch {
